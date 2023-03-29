@@ -15,7 +15,7 @@ To get started:
 In a terminal window, navigate to the `monolith` directory.
 
 1. Run `npm install`.
-1. Run `npm start`.
+2. Run `npm start`.
 
 This will start the GraphQL API server on [http://localhost:4000](http://localhost:4000)
 
@@ -33,7 +33,7 @@ You can take a peek at what the final version of the code should look like (afte
 
 To run the `final` version, navigate to the `final/router` directory.
 
-In a new terminal window, run `APOLLO_KEY=<APOLLO_KEY> APOLLO_GRAPH_REF=<APOLLO_GRAPH_REF> ./router --config config.yaml`. 
+In a new terminal window, run `APOLLO_KEY=<APOLLO_KEY> APOLLO_GRAPH_REF=<APOLLO_GRAPH_REF> ./router --config config.yaml`.
 
 Make sure to replace the values for `APOLLO_KEY` and `APOLLO_GRAPH_REF` (see course content for more details on how to set these up).
 
@@ -42,7 +42,7 @@ This will start the router on [http://localhost:4000](http://localhost:4000)
 Next, let's run the subgraphs we split off according to the course instructions: the monolith subgraph (what's left of it) and the `accounts` subgraph.
 
 1. In a new terminal window, navigate to the root of the `final/monolith` directory, run `npm start`.
-1. In a new terminal window, navigate to the `final/subgraph-accounts` directory, run `npm install` then `npm start`.
+2. In a new terminal window, navigate to the `final/subgraph-accounts` directory, run `npm install` then `npm start`.
 
 Finally, let's run some local services.
 
@@ -51,3 +51,9 @@ Finally, let's run some local services.
 ## Getting Help
 
 For any issues or problems concerning the course content, please [refer to the Odyssey topic in our community forums](https://community.apollographql.com/tags/c/help/6/odyssey).
+
+## Scripts to use
+
+To publish graph into apollo
+`rover subgraph publish apollo-odyssey-voyage-II-server-tutorial-monolith@current --schema ./schema.graphql --name monolith --routing-url http://localhost:4001`
+
